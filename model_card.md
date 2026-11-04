@@ -318,8 +318,6 @@ Profile: Edge: capitalized labels
 
 ## 9. Personal Reflection  
 
-*Draft based on what happened in this project. Rewrite it in your own words.*
-
 **Biggest learning moment.** The biggest learning moment was the "sad but high energy" test. I expected the system to find energetic songs, but it picked a quiet folk song first, just because the genre and mood labels matched. That showed me that the weights *are* the system's opinion. Choosing 2 points for genre and 1.5 for energy quietly decides whose taste counts, and you only notice by trying a user who doesn't fit.
 
 **How AI tools helped, and when I double-checked.** The AI assistant was fast at writing the loader, the scoring function and the CLI layout, and at suggesting edge-case profiles I wouldn't have thought of. But I still had to check its work. Its first write-up of the evaluation claimed two lists shared only two songs when they really shared four, and it gave the wrong maximum score for a profile with no acoustic preference. During the weight experiment, the rerun also briefly showed old results, because Python had loaded a stale cached copy of the file. Running the program again and comparing against the real output caught all of these. The lesson: AI can draft the explanation, but the terminal output is the source of truth.
